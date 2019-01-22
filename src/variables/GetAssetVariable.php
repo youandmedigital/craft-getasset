@@ -12,7 +12,7 @@ class GetAssetVariable
      *
      * @return string
      */
-    public function er($filePath, $mode = 'file'): string
+    public function options($filePath, $mode = 'file'): string
     {
 
         // accept file beginning with 's'
