@@ -28,6 +28,9 @@ class GetAssetVariable
             // get webroot path
             $fullPath = \Yii::getAlias(GetAsset::getInstance()->getSettings()->publicRoot ?? '@webroot');
 
+            // set default value of output
+            $output = '';
+
             // process options...
             $path = $fullPath . $filePath;
             $pattern = $filePattern;
@@ -45,13 +48,14 @@ class GetAssetVariable
             $finder
                 ->sortByModifiedTime();
 
+
             // for each result, set output to filename
             foreach ($finder as $file) {
                 $output = $file->getFileName();
             }
 
-            // return output
             return $output;
+
         }
 
         // otherwise return nothing
