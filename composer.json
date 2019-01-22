@@ -1,21 +1,21 @@
 {
   "name": "youandmedigital/getasset",
-  "description": "Your plugin’s package description",
+  "description": "Get the most recently modified file based on a specified folder path.",
   "version": "0.0.1",
   "type": "craft-plugin",
-  "keywords": ["some", "keywords", "here"],
+  "keywords": ["craft", "cms", "asset-rev", "scandir"],
   "license": "MIT",
   "authors": [
     {
-      "name": "Developer Name",
-      "homepage": "https://developer-website.tld"
+      "name": "You & Me Digital",
+      "homepage": "https://youandme.digital"
     }
   ],
   "support": {
-    "email": "email@developer-website.tld",
-    "issues": "https://github.com/developer/repo/issues?state=open",
-    "source": "https://github.com/developer/repo",
-    "docs": "https://github.com/developer/repo"
+    "email": "craft+getasset@youandme.digital",
+    "issues": "https://github.com/youandmedigital/craft-getasset/issues/new",
+    "source": "https://github.com/youandmedigital/craft-getasset",
+    "docs": "https://github.com/youandmedigital/craft-getasset"
   },
   "require": {
     "craftcms/cms": "^3.0.0"
@@ -26,8 +26,8 @@
     }
   },
   "extra": {
-    "handle": "plugin-handle",
-    "name": "Plugin Name",
+    "handle": "getasset",
+    "name": "Get Asset",
     "class": "youandmedigital\\getasset\\GetAsset"
   }
 }
