@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * GetAsset plugin for Craft CMS 3.x
+ *
+ *
+ * @link      https://github.com/youandmedigital/craft-getasset
+ * @copyright Copyright (c) 2019 You & Me Digital
+ */
+
 namespace youandmedigital\getasset\variables;
 use youandmedigital\getasset\GetAsset;
 use Symfony\Component\Finder\Finder;
@@ -9,33 +17,45 @@ class GetAssetVariable
      * Main GetAsset template variable.
      *
      * @param string $filePath
+     * @param string $filePattern
      *
      * @return string
      */
-    public function options($filePath): string
+
+    public function options($filePath, $filePattern = '*'): string
     {
-        // get webroot path
-        $fullPath = \Yii::getAlias(GetAsset::getInstance()->getSettings()->publicRoot ?? '@webroot');
+        if ($filePath !== '') {
+            // get webroot path
+            $fullPath = \Yii::getAlias(GetAsset::getInstance()->getSettings()->publicRoot ?? '@webroot');
 
-        // join webroot and filePath
-        $path = $fullPath . $filePath;
+            // process options...
+            $path = $fullPath . $filePath;
+            $pattern = $filePattern;
 
-        $finder = new Finder();
-        $finder
-            ->files()
-            ->in($path)
-            ->name('/^(c).min.*\S{10}.css$/')
-            ->depth('== 0')
-            ;
-        $finder
-            ->sortByModifiedTime();
+            // start new finder instance
+            $finder = new Finder();
 
-        foreach ($finder as $file) {
-            $output = $file->getFileName();
+            // filter results based on some options
+            // https://symfony.com/doc/current/components/finder.html
+            $finder
+                ->files()
+                ->in($path)
+                ->name($filePattern)
+                ->depth('== 0');
+            $finder
+                ->sortByModifiedTime();
+
+            // for each result, set output to filename
+            foreach ($finder as $file) {
+                $output = $file->getFileName();
+            }
+
+            // return output
+            return $output;
         }
 
-        return $output;
-
+        // otherwise return nothing
+        return '';
 
     }
 
