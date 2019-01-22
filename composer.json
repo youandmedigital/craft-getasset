@@ -27,6 +27,7 @@
   },
   "extra": {
     "handle": "plugin-handle",
-    "name": "Plugin Name"
+    "name": "Plugin Name",
+    "class": "youandmedigital\\getasset\\GetAsset"
   }
 }
