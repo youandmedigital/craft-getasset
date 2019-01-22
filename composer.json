@@ -1,0 +1,48 @@
+{
+    "name": "youandmedigital/getasset",
+    "description": "Get the lastest modified file from a specified folder path",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "timestamp",
+        "asset-rev"
+    ],
+    "support": {
+        "docs": "https://github.com/youandmedigital/craft-getasset/blob/master/README.md",
+        "issues": "https://github.com/youandmedigital/craft-getasset/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "You & Me Digital",
+            "homepage": "https://youandme.digital"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "youandmedigital\\getasset\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "GetAsset",
+        "handle": "getasset",
+        "schemaVersion": "2.0.0",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://github.com/youandmedigital/craft-getasset/blob/master/CHANGELOG.md",
+        "class": "youandmedigital\\getasset\\GetAsset"
+    }
+}
