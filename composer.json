@@ -12,7 +12,8 @@
         "asset-rev"
     ],
     "support": {
-        "docs": "https://github.com/youandmedigital/craft-getasset/blob/master/README.md",
+        "email": "craft+getasset@youandme.digital",
+        "docs": "https://github.com/youandmedigital/craft-getasset",
         "issues": "https://github.com/youandmedigital/craft-getasset/issues"
     },
     "license": "MIT",
