@@ -8,7 +8,7 @@
         "cms",
         "craftcms",
         "craft-plugin",
-        "timestamp",
+        "scandir",
         "asset-rev"
     ],
     "support": {
@@ -39,7 +39,6 @@
     "extra": {
         "name": "GetAsset",
         "handle": "getasset",
-        "schemaVersion": "2.0.0",
         "hasCpSettings": false,
         "hasCpSection": false,
         "changelogUrl": "https://github.com/youandmedigital/craft-getasset/blob/master/CHANGELOG.md",
