@@ -1,0 +1,35 @@
+{
+  "name": "youandmedigital/craft-getasset",
+  "description": "Look in a folder for a file that was last modified",
+  "version": "1.0.0",
+  "type": "craft-plugin",
+  "keywords": ["craft", "cms", "asset-rev", "scandir", "finder"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "You & Me Digital",
+      "homepage": "https://youandme.digital"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/youandmedigital/craft-getasset/issues/new",
+    "source": "https://github.com/youandmedigital/craft-getasset",
+    "docs": "https://github.com/youandmedigital/craft-getasset"
+  },
+  "require": {
+    "craftcms/cms": "^3.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "youandmedigital\\getasset\\": "src/"
+    }
+  },
+  "extra": {
+    "handle": "getasset",
+    "name": "Get Asset",
+    "components": {
+      "getAssetService": "youandmedigital\\getasset\\services\\GetAssetService"
+    },
+    "class": "youandmedigital\\getasset\\GetAsset"
+  }
+}
